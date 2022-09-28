@@ -1,17 +1,16 @@
-import time
-from selenium import webdriver
-from selenium import *
-import selenium
-from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from selenium import webdriver
 import telebot
+import config
+import shutil
+import time
 import cv2
 import os
-import shutil
 
 
-bot = telebot.TeleBot("5645302503:AAEkj5QE1zosAt7exhjdZpfk83IbSVUCRcY")
+bot = telebot.TeleBot(config.TOKEN) #TOKEN
 
 @bot.message_handler(content_types=['video'])
 def photo(message):
